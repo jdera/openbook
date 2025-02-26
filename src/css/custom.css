@@ -6,15 +6,17 @@
   --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
   
-  --ifm-color-primary: #131313; /* Black primary text color in light mode */
+  --ifm-color-primary: #131313; /* Dark text color for primary text in light mode */
   --ifm-background-color: #FFFFFF; /* White background */
   --ifm-text-color: #131313; /* Main body text color (black) */
   --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  --ifm-footer-background-color: #FFFFFF; /* White footer background in light mode */
+  
+  /* Updated footer colors for light mode */
+  --ifm-footer-background-color: #F5F5F5; /* Light grey footer background */
   --ifm-footer-text-color: #131313; /* Black footer text */
+  
   --ifm-code-font-color: #222222;
-  --ifm-link-color: #131313; /* Black link color for light mode */
-  --ifm-button-text-color: #131313; /* Button text color in light mode */
+  --ifm-link-color: #131313; /* Dark link color for light mode */
 }
 
 /* Dark Mode Styles */
@@ -27,12 +29,13 @@
   --ifm-text-color: #FFFFFF; /* White text color */
   
   --ifm-navbar-background-color: #222222; /* Dark navbar background */
+  
+  /* Updated footer colors for dark mode */
   --ifm-footer-background-color: #131313; /* Dark grey footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text for dark mode */
+  --ifm-footer-text-color: #FFFFFF; /* White footer text */
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
-  --ifm-link-color: #FFFFFF; /* White link color for dark mode */
-  --ifm-button-text-color: #FFFFFF; /* Button text color in dark mode */
+  --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
 }
 
 /* Header Styling */
@@ -72,7 +75,7 @@ a {
 /* Donate button styling */
 .navbar__donate-button {
   background-color: var(--ifm-color-primary-dark); /* Darker primary color */
-  color: var(--ifm-button-text-color); /* Button text color */
+  color: white;
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
@@ -98,9 +101,8 @@ a {
   border-color: var(--ifm-color-primary-darkest);
 }
 
-/* Adjust Donate button text color for dark mode */
+/* Adjust Donate button border in dark mode */
 [data-theme='dark'] .navbar__donate-button {
-  color: var(--ifm-button-text-color); /* White text in dark mode */
   border-color: var(--ifm-color-primary-lightest);
 }
 
