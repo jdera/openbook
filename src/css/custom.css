@@ -70,7 +70,7 @@ a {
 /* Donate button styling */
 .navbar__donate-button {
   background-color: var(--ifm-color-primary-dark); /* Darker primary color */
-  color: #FFFFFF; /* White text in light mode */
+  color: white;
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
