@@ -1,17 +1,26 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
 /* Light Mode Styles */
 :root {
+  --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
+  --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
+  
   --ifm-color-primary: #333333; /* Primary text color */
   --ifm-background-color: #FFFFFF; /* Light background */
   --ifm-text-color: #333333; /* Main body text color */
   --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  --ifm-footer-background-color: #FFFFFF; /* Light footer */
-  --ifm-footer-text-color: #131313; /* Dark footer text */
+  --ifm-footer-background-color: #FFFFFF; /* White footer background */
+  --ifm-footer-text-color: #131313; /* Black footer text */
   --ifm-code-font-color: #222222;
   --ifm-link-color: #1D72B8; /* Primary link color */
 }
 
 /* Dark Mode Styles */
 [data-theme='dark'] {
+  --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
+  --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
+  
   --ifm-color-primary: #D3D3D3; /* Light grey primary text color */
   --ifm-background-color: #131313; /* Dark background for body */
   --ifm-text-color: #D3D3D3; /* Light grey text color */
@@ -22,4 +31,38 @@
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
   --ifm-link-color: #8AB4F8; /* Lighter link color for dark mode */
+}
+
+/* Header Styling */
+.navbar {
+  background-color: var(--ifm-navbar-background-color) !important;
+  color: var(--ifm-text-color) !important;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--ifm-footer-background-color) !important;
+  color: var(--ifm-footer-text-color) !important;
+}
+
+/* Adjust Tip Box Color */
+.alert--info {
+  background-color: #f0f0f0 !important;
+  border-color: #aaa !important;
+  color: #333 !important;
+}
+
+[data-theme='dark'] .alert--info {
+  background-color: #444 !important;
+  border-color: #666 !important;
+  color: #ddd !important;
+}
+
+/* Link Styling */
+a {
+  color: var(--ifm-link-color) !important;
+}
+
+[data-theme='dark'] a {
+  color: var(--ifm-link-color) !important;
 }
