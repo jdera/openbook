@@ -10,10 +10,10 @@
   --ifm-background-color: #FFFFFF; /* White background */
   --ifm-text-color: #131313; /* Main body text color (black) */
   --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  --ifm-footer-background-color: #FFFFFF; /* White footer background */
-  --ifm-footer-text-color: #131313; /* Black footer text */
+  --ifm-footer-background-color: #F5F5F5; /* Muted grey footer background */
+  --ifm-footer-text-color: #666666; /* Muted grey footer text */
   --ifm-code-font-color: #222222;
-  --ifm-link-color: #1D72B8; /* Primary link color */
+  --ifm-link-color: #131313; /* Dark link color for light mode */
 }
 
 /* Dark Mode Styles */
@@ -27,10 +27,10 @@
   
   --ifm-navbar-background-color: #222222; /* Dark navbar background */
   --ifm-footer-background-color: #222222; /* Dark footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text */
+  --ifm-footer-text-color: #BBBBBB; /* Lighter grey footer text */
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
-  --ifm-link-color: #8AB4F8; /* Lighter link color for dark mode */
+  --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
 }
 
 /* Header Styling */
@@ -45,6 +45,15 @@
   color: var(--ifm-footer-text-color) !important;
 }
 
+/* Link Styling */
+a {
+  color: var(--ifm-link-color) !important;
+}
+
+[data-theme='dark'] a {
+  color: var(--ifm-link-color) !important;
+}
+
 /* Adjust Tip Box Color */
 .alert--info {
   background-color: #f0f0f0 !important;
@@ -56,13 +65,4 @@
   background-color: #444 !important;
   border-color: #666 !important;
   color: #ddd !important;
-}
-
-/* Link Styling */
-a {
-  color: var(--ifm-link-color) !important;
-}
-
-[data-theme='dark'] a {
-  color: var(--ifm-link-color) !important;
 }
