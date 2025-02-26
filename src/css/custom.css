@@ -6,17 +6,14 @@
   --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
   
-  --ifm-color-primary: #131313; /* Dark text color for primary text in light mode */
   --ifm-background-color: #FFFFFF; /* White background */
-  --ifm-text-color: #131313; /* Main body text color (black) */
-  --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
+  --ifm-text-color: #131313; /* Dark text color */
+  --ifm-link-color: #131313; /* Dark link color */
+  --ifm-navbar-background-color: #FFFFFF; /* White navbar */
   
-  /* Updated footer colors for light mode */
+  /* Footer colors for light mode */
   --ifm-footer-background-color: #FFFFFF; /* White footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text */
-  
-  --ifm-code-font-color: #222222;
-  --ifm-link-color: #131313; /* Dark link color for light mode */
+  --ifm-footer-text-color: #131313; /* Dark footer text */
 }
 
 /* Dark Mode Styles */
@@ -24,40 +21,41 @@
   --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
   
-  --ifm-color-primary: #FFFFFF; /* White text color for primary text in dark mode */
-  --ifm-background-color: #131313; /* Dark background for body */
-  --ifm-text-color: #131313; /* Dark text color */
+  --ifm-background-color: #131313; /* Dark background */
+  --ifm-text-color: #FFFFFF; /* White text color */
+  --ifm-link-color: #D3D3D3; /* Light grey link color */
+  --ifm-navbar-background-color: #131313; /* Dark navbar */
   
-  --ifm-navbar-background-color: #131313; /* Dark background color for top portion in dark mode */
-  
-  /* Updated footer colors for dark mode */
+  /* Footer colors for dark mode */
   --ifm-footer-background-color: #131313; /* Dark footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text */
-  
-  --ifm-code-font-color: #AAAAAA; /* Light grey code font */
-  --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
+  --ifm-footer-text-color: #D3D3D3; /* Light grey footer text */
 }
 
-/* Main body background and text color */
+/* Apply background and text color */
 body {
-  background-color: var(--ifm-background-color) !important;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+/* Header Styling */
+.navbar {
+  background-color: var(--ifm-navbar-background-color) !important;
   color: var(--ifm-text-color) !important;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--ifm-footer-background-color) !important;
+  color: var(--ifm-footer-text-color) !important;
 }
 
 /* Link Styling */
 a {
   color: var(--ifm-link-color) !important;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: grey !important; /* Grey color on hover */
-}
-
-[data-theme='dark'] a {
-  color: var(--ifm-link-color) !important;
-}
-
-[data-theme='dark'] a:hover {
   color: grey !important; /* Grey color on hover */
 }
 
@@ -76,14 +74,14 @@ a:hover {
 
 /* Donate button styling */
 .navbar__donate-button {
-  background-color: var(--ifm-color-primary); /* Button text color */
-  color: #131313; /* Dark text color for the button in dark mode */
+  background-color: var(--ifm-link-color);
+  color: var(--ifm-background-color); /* Dark text color for the button */
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  border: 2px solid var(--ifm-color-primary);
+  border: 2px solid var(--ifm-link-color);
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   margin-left: 10px;
@@ -93,3 +91,21 @@ a:hover {
 /* Show Donate button on mobile */
 @media (max-width: 767px) {
   .navbar__donate-button {
+    display: block;
+  }
+}
+
+/* Hover effect for Donate button */
+.navbar__donate-button:hover {
+  background-color: #444; /* Darker on hover */
+  border-color: #333;
+}
+
+/* Adjust Donate button border in dark mode */
+[data-theme='dark'] .navbar__donate-button {
+  border-color: #D3D3D3;
+}
+
+[data-theme='dark'] .navbar__donate-button:hover {
+  border-color: #CCCCCC;
+}
