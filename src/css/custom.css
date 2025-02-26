@@ -5,7 +5,7 @@
 :root {
   --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
-  --ifm-color-primary: #131313; /* Black Text for Light Mode */
+  --ifm-color-primary: #808080; /* Grey Text for Light Mode */
   --ifm-color-primary-dark: #222;
   --ifm-color-primary-darker: #111;
   --ifm-color-primary-darkest: #000;
@@ -15,7 +15,7 @@
   --ifm-code-font-size: 92%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --background-color: #FFFFFF; /* White background for Light Mode */
-  --text-color: #131313; /* Black text for Light Mode */
+  --text-color: #808080; /* Grey text for Light Mode */
   --footer-background-color: #FFFFFF; /* White footer in Light Mode */
   --footer-text-color: #131313; /* Black text in Footer */
 }
@@ -24,7 +24,7 @@
 [data-theme='dark'] {
   --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
-  --ifm-color-primary: #FFFFFF; /* White text for Dark Mode */
+  --ifm-color-primary: #D3D3D3; /* Light grey text for Dark Mode */
   --ifm-color-primary-dark: #BBB;
   --ifm-color-primary-darker: #AAA;
   --ifm-color-primary-darkest: #999;
@@ -33,7 +33,7 @@
   --ifm-color-primary-lightest: #FFF;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --background-color: #131313; /* Dark background for Dark Mode */
-  --text-color: #FFFFFF; /* White text for Dark Mode */
+  --text-color: #D3D3D3; /* Light grey text for Dark Mode */
   --footer-background-color: #FFFFFF; /* White footer (does not change) */
   --footer-text-color: #131313; /* Footer text always stays black */
 }
