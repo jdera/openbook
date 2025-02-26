@@ -1,132 +1,124 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+/* Override Infima variables */
+:root {
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'DM Mono', monospace;
+  --ifm-color-primary: #333;
+  --ifm-color-primary-dark: #222;
+  --ifm-color-primary-darker: #111;
+  --ifm-color-primary-darkest: #000;
+  --ifm-color-primary-light: #555;
+  --ifm-color-primary-lighter: #777;
+  --ifm-color-primary-lightest: #999;
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'OpenBooks',
-  tagline: 'Stories of Impossible Things',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+/* Keep dark mode colors monochrome */
+[data-theme='dark'] {
+  --ifm-color-primary: #ccc;
+  --ifm-color-primary-dark: #bbb;
+  --ifm-color-primary-darker: #aaa;
+  --ifm-color-primary-darkest: #999;
+  --ifm-color-primary-light: #ddd;
+  --ifm-color-primary-lighter: #eee;
+  --ifm-color-primary-lightest: #fff;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+/* Header styling */
+.navbar {
+  background-color: #FFFFFF !important; /* White header background */
+  color: #131313 !important; /* Black/Grey text */
+}
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+/* Ensure header text color does not change in dark mode */
+[data-theme='dark'] .navbar {
+  background-color: #FFFFFF !important;
+  color: #131313 !important;
+}
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
-  ],
+/* Footer styling */
+.footer {
+  background-color: #333 !important; /* Previous header color */
+  color: white !important;
+}
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'OpenBooks',
-        logo: {
-          alt: 'OpenBooks Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
-};
+/* Adjust Tip Box Color */
+.alert--info {
+  background-color: #f0f0f0 !important;
+  border-color: #aaa !important;
+  color: #333 !important;
+}
 
-module.exports = config;
+[data-theme='dark'] .alert--info {
+  background-color: #444 !important;
+  border-color: #666 !important;
+  color: #ddd !important;
+}
+
+/* Hide Contact link by default */
+.navbar .navbar__item--contact {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar__menu--opened .navbar__item--contact {
+    display: block;
+  }
+}
+
+/* Donate button styling */
+.navbar__donate-button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--ifm-color-primary-dark);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  margin-left: 10px;
+  display: none;
+}
+
+/* Show Donate button on mobile */
+@media (max-width: 767px) {
+  .navbar__donate-button {
+    display: block;
+  }
+}
+
+/* Hover effect for Donate button */
+.navbar__donate-button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-darker);
+}
+
+/* Adjust Donate button border in dark mode */
+[data-theme='dark'] .navbar__donate-button {
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] .navbar__donate-button:hover {
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+/* Ensure main header and subheader remain white */
+.hero__title, .hero__subtitle {
+  color: white !important;
+}
+
+/* Adjust H1 and H2 font sizes for mobile */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  .hero__subtitle {
+    font-size: 1.25rem;
+  }
+}
