@@ -28,6 +28,24 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
 
+/* Header styling */
+.navbar {
+  background-color: #FFFFFF !important;
+  color: #131313 !important;
+}
+
+/* Ensure header text color does not change in dark mode */
+[data-theme='dark'] .navbar {
+  background-color: #FFFFFF !important;
+  color: #131313 !important;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #FFFFFF !important;
+  color: #131313 !important;
+}
+
 /* Adjust Tip Box Color */
 .alert--info {
   background-color: #f0f0f0 !important;
@@ -95,12 +113,4 @@
   color: white !important;
 }
 
-/* Adjust H1 and H2 font sizes for mobile */
-@media (max-width: 768px) {
-  .hero__title {
-    font-size: 2.5rem;
-  }
-  .hero__subtitle {
-    font-size: 1.25rem;
-  }
-}
+/* Adjust H1 and H
