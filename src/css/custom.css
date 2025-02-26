@@ -1,10 +1,10 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
 /* Override Infima variables */
 :root {
-  --ifm-font-family-base: 'Inter', sans-serif;
-  --ifm-font-family-monospace: 'DM Mono', monospace;
+  --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
+  --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
   --ifm-color-primary: #131313; /* Black Text for Light Mode */
   --ifm-color-primary-dark: #222;
   --ifm-color-primary-darker: #111;
@@ -17,10 +17,13 @@
   --background-color: #FFFFFF; /* White background for Light Mode */
   --text-color: #131313; /* Black text for Light Mode */
   --footer-background-color: #FFFFFF; /* White footer in Light Mode */
+  --footer-text-color: #131313; /* Black text in Footer */
 }
 
-/* Keep dark mode colors inverted */
+/* Keep dark mode colors inverted but preserve header and footer colors */
 [data-theme='dark'] {
+  --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
+  --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
   --ifm-color-primary: #FFFFFF; /* White text for Dark Mode */
   --ifm-color-primary-dark: #BBB;
   --ifm-color-primary-darker: #AAA;
@@ -31,7 +34,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --background-color: #131313; /* Dark background for Dark Mode */
   --text-color: #FFFFFF; /* White text for Dark Mode */
-  --footer-background-color: #444; /* Light grey footer for Dark Mode */
+  --footer-background-color: #FFFFFF; /* White footer */
+  --footer-text-color: #131313; /* Footer text stays black */
 }
 
 /* Header styling */
@@ -49,7 +53,7 @@
 /* Footer styling */
 .footer {
   background-color: var(--footer-background-color) !important;
-  color: var(--text-color) !important;
+  color: var(--footer-text-color) !important;
 }
 
 /* Adjust Tip Box Color */
