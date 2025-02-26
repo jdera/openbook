@@ -24,11 +24,11 @@
   --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
   
-  --ifm-color-primary: #131313; /* Dark text color for primary text in dark mode */
+  --ifm-color-primary: #FFFFFF; /* White text color for primary text in dark mode */
   --ifm-background-color: #131313; /* Dark background for body */
-  --ifm-text-color: #FFFFFF; /* White text color */
+  --ifm-text-color: #131313; /* Dark text color */
   
-  --ifm-navbar-background-color: #FFFFFF; /* Light navbar in dark mode */
+  --ifm-navbar-background-color: #131313; /* Dark background color for top portion in dark mode */
   
   /* Updated footer colors for dark mode */
   --ifm-footer-background-color: #131313; /* Dark footer background */
@@ -38,16 +38,10 @@
   --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
 }
 
-/* Header Styling */
-.navbar {
-  background-color: var(--ifm-navbar-background-color) !important;
+/* Main body background and text color */
+body {
+  background-color: var(--ifm-background-color) !important;
   color: var(--ifm-text-color) !important;
-}
-
-/* Footer Styling */
-.footer {
-  background-color: var(--ifm-footer-background-color) !important;
-  color: var(--ifm-footer-text-color) !important;
 }
 
 /* Link Styling */
@@ -99,21 +93,3 @@ a:hover {
 /* Show Donate button on mobile */
 @media (max-width: 767px) {
   .navbar__donate-button {
-    display: block;
-  }
-}
-
-/* Hover effect for Donate button */
-.navbar__donate-button:hover {
-  background-color: var(--ifm-color-primary-darker); /* Even darker on hover */
-  border-color: var(--ifm-color-primary-darkest);
-}
-
-/* Adjust Donate button border in dark mode */
-[data-theme='dark'] .navbar__donate-button {
-  border-color: var(--ifm-color-primary-lightest);
-}
-
-[data-theme='dark'] .navbar__donate-button:hover {
-  border-color: var(--ifm-color-primary-lighter);
-}
