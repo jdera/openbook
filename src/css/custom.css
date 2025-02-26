@@ -70,7 +70,7 @@ a {
 /* Donate button styling */
 .navbar__donate-button {
   background-color: var(--ifm-color-primary-dark); /* Darker primary color */
-  color: white;
+  color: #FFFFFF; /* White text in light mode */
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
@@ -96,8 +96,9 @@ a {
   border-color: var(--ifm-color-primary-darkest);
 }
 
-/* Adjust Donate button border in dark mode */
+/* Adjust Donate button text color for dark mode */
 [data-theme='dark'] .navbar__donate-button {
+  color: #131313; /* Black text in dark mode */
   border-color: var(--ifm-color-primary-lightest);
 }
 
