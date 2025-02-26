@@ -10,8 +10,8 @@
   --ifm-background-color: #FFFFFF; /* White background */
   --ifm-text-color: #131313; /* Main body text color (black) */
   --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  --ifm-footer-background-color: #F5F5F5; /* Medium grey footer background in light mode */
-  --ifm-footer-text-color: #666666; /* Muted grey footer text */
+  --ifm-footer-background-color: #FFFFFF; /* White footer background in light mode */
+  --ifm-footer-text-color: #131313; /* Black footer text */
   --ifm-code-font-color: #222222;
   --ifm-link-color: #131313; /* Dark link color for light mode */
 }
@@ -27,7 +27,7 @@
   
   --ifm-navbar-background-color: #222222; /* Dark navbar background */
   --ifm-footer-background-color: #131313; /* Dark grey footer background */
-  --ifm-footer-text-color: #D3D3D3; /* Light grey footer text for dark mode */
+  --ifm-footer-text-color: #FFFFFF; /* White footer text for dark mode */
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
   --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
@@ -65,4 +65,42 @@ a {
   background-color: #444 !important;
   border-color: #666 !important;
   color: #ddd !important;
+}
+
+/* Donate button styling */
+.navbar__donate-button {
+  background-color: var(--ifm-color-primary-dark); /* Darker primary color */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--ifm-color-primary-dark);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  margin-left: 10px;
+  display: none;
+}
+
+/* Show Donate button on mobile */
+@media (max-width: 767px) {
+  .navbar__donate-button {
+    display: block;
+  }
+}
+
+/* Hover effect for Donate button */
+.navbar__donate-button:hover {
+  background-color: var(--ifm-color-primary-darker); /* Even darker on hover */
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+/* Adjust Donate button border in dark mode */
+[data-theme='dark'] .navbar__donate-button {
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme='dark'] .navbar__donate-button:hover {
+  border-color: var(--ifm-color-primary-lighter);
 }
