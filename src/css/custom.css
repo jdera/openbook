@@ -18,13 +18,14 @@
   --text-color: #808080; /* Dark grey text for Light Mode */
   --footer-background-color: #FFFFFF; /* White footer in Light Mode */
   --footer-text-color: #131313; /* Black text in Footer */
+  --navbar-text-color: #131313; /* Black header text for Light Mode */
 }
 
 /* Keep dark mode colors inverted but preserve header and footer colors */
 [data-theme='dark'] {
   --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
-  --ifm-color-primary: #D3D3D3; /* Light Grey Text for Dark Mode */
+  --ifm-color-primary: #808080; /* Dark Grey Text for Dark Mode */
   --ifm-color-primary-dark: #BBB;
   --ifm-color-primary-darker: #AAA;
   --ifm-color-primary-darkest: #999;
@@ -33,21 +34,16 @@
   --ifm-color-primary-lightest: #FFF;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --background-color: #131313; /* Dark background for Dark Mode */
-  --text-color: #D3D3D3; /* Light grey text for Dark Mode */
-  --footer-background-color: #222222; /* Dark footer in Dark Mode */
+  --text-color: #808080; /* Dark grey text for Dark Mode */
+  --footer-background-color: #FFFFFF; /* White footer (does not change) */
   --footer-text-color: #131313; /* Footer text always stays black */
+  --navbar-text-color: #DDD; /* Lighter text for header in Dark Mode */
 }
 
 /* Header styling */
 .navbar {
   background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-}
-
-/* Ensure header text color does not change in dark mode */
-[data-theme='dark'] .navbar {
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
+  color: var(--navbar-text-color) !important;
 }
 
 /* Footer styling */
