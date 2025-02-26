@@ -1,95 +1,148 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
-/* Light Mode Styles */
+/* ---------- Light Mode Styles ---------- */
 :root {
-  --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
-  --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
-  
-  --ifm-color-primary: #131313; /* Dark text color for primary text in light mode */
-  --ifm-background-color: #FFFFFF; /* White background */
-  --ifm-text-color: #131313; /* Main body text color (black) */
-  --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  
-  /* Updated footer colors for light mode */
-  --ifm-footer-background-color: #FFFFFF; /* White footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text */
-  
-  --ifm-code-font-color: #222222;
-  --ifm-link-color: #131313; /* Dark link color for light mode */
+  /* Fonts */
+  --ifm-font-family-base: 'Rubik', sans-serif;
+  --ifm-font-family-monospace: 'DM Mono', monospace;
+
+  /* Colors */
+  --ifm-color-primary: #131313;          /* Primary color */
+  --ifm-color-text: #131313;             /* Main text color */
+  --ifm-background-color: #FFFFFF;       /* Background color */
+  --ifm-navbar-background-color: #FFFFFF; /* Navbar background */
+  --ifm-navbar-link-color: #131313;      /* Navbar link color */
+  --ifm-footer-background-color: #FFFFFF; /* Footer background */
+  --ifm-footer-text-color: #131313;      /* Footer text color */
+  --ifm-link-color: #131313;             /* Link color */
+  --ifm-link-hover-color: grey;          /* Link hover color */
+  --ifm-button-background-color: #131313; /* Button background */
+  --ifm-button-text-color: #FFFFFF;      /* Button text color */
 }
 
-/* Dark Mode Styles */
+/* ---------- Dark Mode Styles ---------- */
 [data-theme='dark'] {
-  --ifm-font-family-base: 'Rubik', sans-serif; /* Rubik font for all text */
-  --ifm-font-family-monospace: 'Rubik', monospace; /* Monospace font set to Rubik */
-  
-  --ifm-color-primary: #FFFFFF; /* White text color for primary text in dark mode */
-  --ifm-background-color: #131313; /* Dark background for body */
-  --ifm-text-color: #131313; /* Dark text color */
-  
-  --ifm-navbar-background-color: #131313; /* Dark background color for top portion in dark mode */
-  
-  /* Updated footer colors for dark mode */
-  --ifm-footer-background-color: #131313; /* Dark footer background */
-  --ifm-footer-text-color: #FFFFFF; /* White footer text */
-  
-  --ifm-code-font-color: #AAAAAA; /* Light grey code font */
-  --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
+  /* Colors */
+  --ifm-color-primary: #FFFFFF;          /* Primary color */
+  --ifm-color-text: #FFFFFF;             /* Main text color */
+  --ifm-background-color: #131313;       /* Background color */
+  --ifm-navbar-background-color: #131313; /* Navbar background */
+  --ifm-navbar-link-color: #FFFFFF;      /* Navbar link color */
+  --ifm-footer-background-color: #131313; /* Footer background */
+  --ifm-footer-text-color: #FFFFFF;      /* Footer text color */
+  --ifm-link-color: #FFFFFF;             /* Link color */
+  --ifm-link-hover-color: grey;          /* Link hover color */
+  --ifm-button-background-color: #FFFFFF; /* Button background */
+  --ifm-button-text-color: #131313;      /* Button text color */
 }
 
-/* Main body background and text color */
+/* ---------- General Styles ---------- */
+/* Body */
 body {
-  background-color: var(--ifm-background-color) !important;
-  color: var(--ifm-text-color) !important;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-text);
+  font-family: var(--ifm-font-family-base);
 }
 
-/* Link Styling */
+/* Navbar */
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.navbar__link,
+.navbar__item .navbar__link {
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__link:hover,
+.navbar__item .navbar__link:hover {
+  color: var(--ifm-link-hover-color);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-text-color);
+}
+
+.footer a {
+  color: var(--ifm-footer-text-color);
+}
+
+.footer a:hover {
+  color: var(--ifm-link-hover-color);
+}
+
+/* Main Content */
+.main-wrapper {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-text);
+}
+
+/* Links */
 a {
-  color: var(--ifm-link-color) !important;
+  color: var(--ifm-link-color);
 }
 
 a:hover {
-  color: grey !important; /* Grey color on hover */
+  color: var(--ifm-link-hover-color);
 }
 
-[data-theme='dark'] a {
-  color: var(--ifm-link-color) !important;
+/* Buttons */
+.button {
+  background-color: var(--ifm-button-background-color);
+  color: var(--ifm-button-text-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-[data-theme='dark'] a:hover {
-  color: grey !important; /* Grey color on hover */
+.button:hover {
+  opacity: 0.8;
 }
 
-/* Adjust Tip Box Color */
+/* Code Blocks */
+code,
+pre {
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* Tip/Alert Boxes */
 .alert--info {
-  background-color: #f0f0f0 !important;
-  border-color: #aaa !important;
-  color: #333 !important;
+  background-color: #f0f0f0;
+  border-color: #aaa;
+  color: #333;
 }
 
 [data-theme='dark'] .alert--info {
-  background-color: #444 !important;
-  border-color: #666 !important;
-  color: #ddd !important;
+  background-color: #444;
+  border-color: #666;
+  color: #ddd;
 }
 
-/* Donate button styling */
-.navbar__donate-button {
-  background-color: var(--ifm-color-primary); /* Button text color */
-  color: #131313; /* Dark text color for the button in dark mode */
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid var(--ifm-color-primary);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  margin-left: 10px;
-  display: none;
+/* Override Docusaurus Variables if Necessary */
+:root {
+  /* Override any specific Docusaurus variables here */
 }
 
-/* Show Donate button on mobile */
-@media (max-width: 767px) {
-  .navbar__donate-button {
+[data-theme='dark'] {
+  /* Override any specific Docusaurus variables here */
+}
+
+/* ---------- Additional Customizations ---------- */
+/* Ensure top portion of main body retains background and text color */
+.main-wrapper .hero--primary {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-text);
+}
+
+/* Adjustments for specific components if needed */
+/* For example, if using Docs pages */
+.docMainContainer {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-text);
+}
