@@ -9,39 +9,47 @@
 
   /* Colors */
   --ifm-color-primary: #131313;          /* Primary color */
-  --ifm-color-text: #131313;             /* Main text color */
+  --ifm-text-color: #131313;             /* Main text color */
   --ifm-background-color: #FFFFFF;       /* Background color */
-  --ifm-navbar-background-color: #FFFFFF; /* Navbar background */
-  --ifm-navbar-link-color: #131313;      /* Navbar link color */
-  --ifm-footer-background-color: #FFFFFF; /* Footer background */
-  --ifm-footer-text-color: #131313;      /* Footer text color */
-  --ifm-link-color: #131313;             /* Link color */
-  --ifm-link-hover-color: grey;          /* Link hover color */
-  --ifm-button-background-color: #131313; /* Button background */
-  --ifm-button-text-color: #FFFFFF;      /* Button text color */
+  --ifm-navbar-background-color: #FFFFFF;
+  --ifm-navbar-link-color: #131313;
+  --ifm-footer-background-color: #FFFFFF;
+  --ifm-footer-text-color: #131313;
+  --ifm-link-color: #131313;
+  --ifm-link-hover-color: grey;
+  --ifm-button-background-color: #131313;
+  --ifm-button-text-color: #FFFFFF;
+  --ifm-pre-background: #FFFFFF;         /* Code block background */
+  --ifm-code-background: #FFFFFF;        /* Inline code background */
+  --ifm-sidebar-background-color: #FFFFFF;
+  --ifm-quote-background-color: #FFFFFF;
 }
 
 /* ---------- Dark Mode Styles ---------- */
 [data-theme='dark'] {
   /* Colors */
-  --ifm-color-primary: #FFFFFF;          /* Primary color */
-  --ifm-color-text: #FFFFFF;             /* Main text color */
-  --ifm-background-color: #131313;       /* Background color */
-  --ifm-navbar-background-color: #131313; /* Navbar background */
-  --ifm-navbar-link-color: #FFFFFF;      /* Navbar link color */
-  --ifm-footer-background-color: #131313; /* Footer background */
-  --ifm-footer-text-color: #FFFFFF;      /* Footer text color */
-  --ifm-link-color: #FFFFFF;             /* Link color */
-  --ifm-link-hover-color: grey;          /* Link hover color */
-  --ifm-button-background-color: #FFFFFF; /* Button background */
-  --ifm-button-text-color: #131313;      /* Button text color */
+  --ifm-color-primary: #FFFFFF;
+  --ifm-text-color: #FFFFFF;
+  --ifm-background-color: #131313;
+  --ifm-navbar-background-color: #131313;
+  --ifm-navbar-link-color: #FFFFFF;
+  --ifm-footer-background-color: #131313;
+  --ifm-footer-text-color: #FFFFFF;
+  --ifm-link-color: #FFFFFF;
+  --ifm-link-hover-color: grey;
+  --ifm-button-background-color: #FFFFFF;
+  --ifm-button-text-color: #131313;
+  --ifm-pre-background: #131313;
+  --ifm-code-background: #131313;
+  --ifm-sidebar-background-color: #131313;
+  --ifm-quote-background-color: #131313;
 }
 
 /* ---------- General Styles ---------- */
 /* Body */
 body {
   background-color: var(--ifm-background-color);
-  color: var(--ifm-color-text);
+  color: var(--ifm-text-color);
   font-family: var(--ifm-font-family-base);
 }
 
@@ -77,7 +85,7 @@ body {
 /* Main Content */
 .main-wrapper {
   background-color: var(--ifm-background-color);
-  color: var(--ifm-color-text);
+  color: var(--ifm-text-color);
 }
 
 /* Links */
@@ -106,43 +114,70 @@ a:hover {
 }
 
 /* Code Blocks */
-code,
-pre {
+pre,
+code {
+  background-color: var(--ifm-pre-background);
+  color: var(--ifm-text-color);
   font-family: var(--ifm-font-family-monospace);
 }
 
-/* Tip/Alert Boxes */
-.alert--info {
-  background-color: #f0f0f0;
-  border-color: #aaa;
-  color: #333;
+/* Sidebar */
+.theme-doc-sidebar-container {
+  background-color: var(--ifm-sidebar-background-color);
 }
 
-[data-theme='dark'] .alert--info {
-  background-color: #444;
-  border-color: #666;
-  color: #ddd;
+.theme-doc-sidebar-item > a {
+  color: var(--ifm-link-color);
+}
+
+.theme-doc-sidebar-item > a:hover {
+  color: var(--ifm-link-hover-color);
+}
+
+/* Blockquotes */
+blockquote {
+  background-color: var(--ifm-quote-background-color);
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 0.5em 1em;
+  color: var(--ifm-text-color);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Alert Boxes */
+.alert {
+  background-color: var(--ifm-quote-background-color);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-text-color);
+}
+
+/* Tip/Info Boxes */
+.alert--info {
+  background-color: var(--ifm-quote-background-color);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-text-color);
 }
 
 /* Override Docusaurus Variables if Necessary */
 :root {
-  /* Override any specific Docusaurus variables here */
+  /* Add or override any specific Docusaurus variables here */
 }
 
 [data-theme='dark'] {
-  /* Override any specific Docusaurus variables here */
+  /* Add or override any specific Docusaurus variables here */
 }
 
 /* ---------- Additional Customizations ---------- */
 /* Ensure top portion of main body retains background and text color */
-.main-wrapper .hero--primary {
+.hero {
   background-color: var(--ifm-background-color);
-  color: var(--ifm-color-text);
+  color: var(--ifm-text-color);
 }
 
 /* Adjustments for specific components if needed */
-/* For example, if using Docs pages */
 .docMainContainer {
   background-color: var(--ifm-background-color);
-  color: var(--ifm-color-text);
+  color: var(--ifm-text-color);
 }
