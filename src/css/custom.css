@@ -10,7 +10,7 @@
   --ifm-background-color: #FFFFFF; /* White background */
   --ifm-text-color: #131313; /* Main body text color (black) */
   --ifm-navbar-background-color: #FFFFFF; /* Light navbar */
-  --ifm-footer-background-color: #F5F5F5; /* Muted grey footer background */
+  --ifm-footer-background-color: #F5F5F5; /* Medium grey footer background in light mode */
   --ifm-footer-text-color: #666666; /* Muted grey footer text */
   --ifm-code-font-color: #222222;
   --ifm-link-color: #131313; /* Dark link color for light mode */
@@ -26,8 +26,8 @@
   --ifm-text-color: #FFFFFF; /* White text color */
   
   --ifm-navbar-background-color: #222222; /* Dark navbar background */
-  --ifm-footer-background-color: #222222; /* Dark footer background */
-  --ifm-footer-text-color: #BBBBBB; /* Lighter grey footer text */
+  --ifm-footer-background-color: #131313; /* Dark grey footer background */
+  --ifm-footer-text-color: #D3D3D3; /* Light grey footer text for dark mode */
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
   --ifm-link-color: #D3D3D3; /* Light grey link color for dark mode */
