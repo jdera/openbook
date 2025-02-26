@@ -1,124 +1,100 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
 
-/* Override Infima variables */
-:root {
-  --ifm-font-family-base: 'Inter', sans-serif;
-  --ifm-font-family-monospace: 'DM Mono', monospace;
-  --ifm-color-primary: #333;
-  --ifm-color-primary-dark: #222;
-  --ifm-color-primary-darker: #111;
-  --ifm-color-primary-darkest: #000;
-  --ifm-color-primary-light: #555;
-  --ifm-color-primary-lighter: #777;
-  --ifm-color-primary-lightest: #999;
-  --ifm-code-font-size: 92%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-/* Keep dark mode colors monochrome */
-[data-theme='dark'] {
-  --ifm-color-primary: #ccc;
-  --ifm-color-primary-dark: #bbb;
-  --ifm-color-primary-darker: #aaa;
-  --ifm-color-primary-darkest: #999;
-  --ifm-color-primary-light: #ddd;
-  --ifm-color-primary-lighter: #eee;
-  --ifm-color-primary-lightest: #fff;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-}
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'OpenBooks',
+  tagline: 'Free Knowledge for Everyone',
+  url: 'https://your-docusaurus-test-site.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
 
-/* Header styling */
-.navbar {
-  background-color: #FFFFFF !important; /* White header background */
-  color: #131313 !important; /* Black/Grey text */
-}
+  organizationName: 'openbooks-org', // Change to your GitHub org/user name
+  projectName: 'openbooks', // Change to your repo name
 
-/* Ensure header text color does not change in dark mode */
-[data-theme='dark'] .navbar {
-  background-color: #FFFFFF !important;
-  color: #131313 !important;
-}
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 
-/* Footer styling */
-.footer {
-  background-color: #333 !important; /* Previous header color */
-  color: white !important;
-}
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl:
+            'https://github.com/openbooks-org/openbooks/tree/main/',
+        },
+        blog: {
+          showReadingTime: true,
+          editUrl:
+            'https://github.com/openbooks-org/openbooks/tree/main/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
 
-/* Adjust Tip Box Color */
-.alert--info {
-  background-color: #f0f0f0 !important;
-  border-color: #aaa !important;
-  color: #333 !important;
-}
+  themeConfig: {
+    navbar: {
+      title: 'OpenBooks',
+      logo: {
+        alt: 'OpenBooks Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Docs',
+        },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/openbooks-org/openbooks',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [{ label: 'Introduction', to: '/docs/intro' }],
+        },
+        {
+          title: 'Community',
+          items: [
+            { label: 'Discord', href: 'https://discord.gg/openbooks' },
+            { label: 'Twitter', href: 'https://twitter.com/openbooks' },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            { label: 'Blog', to: '/blog' },
+            { label: 'GitHub', href: 'https://github.com/openbooks-org/openbooks' },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} OpenBooks. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  },
+};
 
-[data-theme='dark'] .alert--info {
-  background-color: #444 !important;
-  border-color: #666 !important;
-  color: #ddd !important;
-}
-
-/* Hide Contact link by default */
-.navbar .navbar__item--contact {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .navbar__menu--opened .navbar__item--contact {
-    display: block;
-  }
-}
-
-/* Donate button styling */
-.navbar__donate-button {
-  background-color: var(--ifm-color-primary);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid var(--ifm-color-primary-dark);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  margin-left: 10px;
-  display: none;
-}
-
-/* Show Donate button on mobile */
-@media (max-width: 767px) {
-  .navbar__donate-button {
-    display: block;
-  }
-}
-
-/* Hover effect for Donate button */
-.navbar__donate-button:hover {
-  background-color: var(--ifm-color-primary-dark);
-  border-color: var(--ifm-color-primary-darker);
-}
-
-/* Adjust Donate button border in dark mode */
-[data-theme='dark'] .navbar__donate-button {
-  border-color: var(--ifm-color-primary-lightest);
-}
-
-[data-theme='dark'] .navbar__donate-button:hover {
-  border-color: var(--ifm-color-primary-lighter);
-}
-
-/* Ensure main header and subheader remain white */
-.hero__title, .hero__subtitle {
-  color: white !important;
-}
-
-/* Adjust H1 and H2 font sizes for mobile */
-@media (max-width: 768px) {
-  .hero__title {
-    font-size: 2.5rem;
-  }
-  .hero__subtitle {
-    font-size: 1.25rem;
-  }
-}
+module.exports = config;
