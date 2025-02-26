@@ -5,7 +5,7 @@
 :root {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'DM Mono', monospace;
-  --ifm-color-primary: #333;
+  --ifm-color-primary: #131313; /* Black Text for Light Mode */
   --ifm-color-primary-dark: #222;
   --ifm-color-primary-darker: #111;
   --ifm-color-primary-darkest: #000;
@@ -14,36 +14,42 @@
   --ifm-color-primary-lightest: #999;
   --ifm-code-font-size: 92%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --background-color: #FFFFFF; /* White background for Light Mode */
+  --text-color: #131313; /* Black text for Light Mode */
+  --footer-background-color: #FFFFFF; /* White footer in Light Mode */
 }
 
-/* Keep dark mode colors monochrome */
+/* Keep dark mode colors inverted */
 [data-theme='dark'] {
-  --ifm-color-primary: #ccc;
-  --ifm-color-primary-dark: #bbb;
-  --ifm-color-primary-darker: #aaa;
+  --ifm-color-primary: #FFFFFF; /* White text for Dark Mode */
+  --ifm-color-primary-dark: #BBB;
+  --ifm-color-primary-darker: #AAA;
   --ifm-color-primary-darkest: #999;
-  --ifm-color-primary-light: #ddd;
-  --ifm-color-primary-lighter: #eee;
-  --ifm-color-primary-lightest: #fff;
+  --ifm-color-primary-light: #DDD;
+  --ifm-color-primary-lighter: #EEE;
+  --ifm-color-primary-lightest: #FFF;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --background-color: #131313; /* Dark background for Dark Mode */
+  --text-color: #FFFFFF; /* White text for Dark Mode */
+  --footer-background-color: #444; /* Light grey footer for Dark Mode */
 }
 
 /* Header styling */
 .navbar {
-  background-color: #FFFFFF !important;
-  color: #131313 !important;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
 }
 
 /* Ensure header text color does not change in dark mode */
 [data-theme='dark'] .navbar {
-  background-color: #FFFFFF !important;
-  color: #131313 !important;
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
 }
 
 /* Footer styling */
 .footer {
-  background-color: #FFFFFF !important;
-  color: #131313 !important;
+  background-color: var(--footer-background-color) !important;
+  color: var(--text-color) !important;
 }
 
 /* Adjust Tip Box Color */
