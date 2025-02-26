@@ -28,10 +28,10 @@
   --ifm-background-color: #131313; /* Dark background for body */
   --ifm-text-color: #FFFFFF; /* White text color */
   
-  --ifm-navbar-background-color: #222222; /* Dark navbar background */
+  --ifm-navbar-background-color: #FFFFFF; /* Light navbar in dark mode */
   
   /* Updated footer colors for dark mode */
-  --ifm-footer-background-color: #131313; /* Dark grey footer background */
+  --ifm-footer-background-color: #131313; /* Dark footer background */
   --ifm-footer-text-color: #FFFFFF; /* White footer text */
   
   --ifm-code-font-color: #AAAAAA; /* Light grey code font */
@@ -83,7 +83,7 @@ a:hover {
 /* Donate button styling */
 .navbar__donate-button {
   background-color: var(--ifm-color-primary); /* Button text color */
-  color: #131313; /* Dark text color for the button */
+  color: #131313; /* Dark text color for the button in dark mode */
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: 600;
