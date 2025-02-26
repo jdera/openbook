@@ -24,7 +24,7 @@
 [data-theme='dark'] {
   --ifm-font-family-base: 'Rubik', sans-serif; /* All fonts changed to Rubik */
   --ifm-font-family-monospace: 'Rubik', monospace; /* Also changed monospace to Rubik */
-  --ifm-color-primary: #808080; /* Dark Grey Text for Dark Mode */
+  --ifm-color-primary: #D3D3D3; /* Light Grey Text for Dark Mode */
   --ifm-color-primary-dark: #BBB;
   --ifm-color-primary-darker: #AAA;
   --ifm-color-primary-darkest: #999;
@@ -33,8 +33,8 @@
   --ifm-color-primary-lightest: #FFF;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
   --background-color: #131313; /* Dark background for Dark Mode */
-  --text-color: #808080; /* Dark grey text for Dark Mode */
-  --footer-background-color: #FFFFFF; /* White footer (does not change) */
+  --text-color: #D3D3D3; /* Light grey text for Dark Mode */
+  --footer-background-color: #222222; /* Dark footer in Dark Mode */
   --footer-text-color: #131313; /* Footer text always stays black */
 }
 
