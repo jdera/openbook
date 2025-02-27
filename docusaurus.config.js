@@ -54,7 +54,8 @@ const config = {
         title: 'OpenBooks',
         logo: {
           alt: 'OpenBooks Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.svg', // Light mode logo
+          srcDark: 'img/logo-dark.svg', // Dark mode logo (ensure this file exists!)
         },
         items: [
           {
