@@ -8,15 +8,15 @@
   --ifm-font-family-monospace: 'DM Mono', monospace;
 
   /* Primary Colors */
-  --ifm-color-primary: #131313;          /* Primary color */
-  --ifm-color-primary-dark: #000000;     /* Darker primary color */
-  --ifm-color-primary-darker: #000000;   /* Even darker */
-  --ifm-color-primary-light: #333333;    /* Lighter primary color */
-  --ifm-color-primary-lighter: #666666;  /* Even lighter */
+  --ifm-color-primary: #131313;          
+  --ifm-color-primary-dark: #000000;     
+  --ifm-color-primary-darker: #000000;   
+  --ifm-color-primary-light: #333333;    
+  --ifm-color-primary-lighter: #666666;  
 
   /* Text and Background Colors */
-  --ifm-text-color: #131313;             /* Main text color */
-  --ifm-background-color: #FFFFFF;       /* Background color */
+  --ifm-text-color: #131313;             
+  --ifm-background-color: #FFFFFF;       
 
   /* Navbar */
   --ifm-navbar-background-color: #FFFFFF;
@@ -49,7 +49,10 @@
   --ifm-quote-color: #131313;
 
   /* Custom Slate Grey Color Replacement */
-  --custom-slate-grey: #FFFFFF; /* Changed from slate grey to white */
+  --custom-slate-grey: #FFFFFF;
+
+  /* Symbol Color */
+  --symbol-color: inherit; /* Keep original symbol color in light mode */
 }
 
 /* ---------- Dark Mode Styles ---------- */
@@ -80,7 +83,7 @@
 
   /* Buttons */
   --ifm-button-background-color: #FFFFFF;
-  --ifm-button-text-color: #131313; /* Button text in dark mode is #131313 */
+  --ifm-button-text-color: #131313;
 
   /* Code Blocks */
   --ifm-pre-background: #131313;
@@ -96,11 +99,13 @@
   --ifm-quote-color: #FFFFFF;
 
   /* Custom Slate Grey Color Replacement */
-  --custom-slate-grey: #131313; /* Changed from slate grey to #131313 */
+  --custom-slate-grey: #131313;
+
+  /* Symbol Color */
+  --symbol-color: #FFFFFF; /* Make symbol white in dark mode */
 }
 
 /* ---------- General Styles ---------- */
-/* Body */
 body {
   background-color: var(--ifm-background-color);
   color: var(--ifm-text-color);
@@ -173,7 +178,7 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Donate Button Specific Styling */
+/* Donate Button */
 .navbar__donate-button {
   background-color: var(--ifm-button-background-color);
   color: var(--ifm-button-text-color);
@@ -189,18 +194,11 @@ a:hover {
   display: none;
 }
 
-/* Show Donate button on mobile */
+/* Show Donate Button on Mobile */
 @media (max-width: 767px) {
   .navbar__donate-button {
     display: block;
   }
-}
-
-/* Hover effect for Donate button */
-.navbar__donate-button:hover {
-  background-color: var(--ifm-button-background-color);
-  border-color: var(--ifm-color-primary-darker);
-  opacity: 0.8;
 }
 
 /* Code Blocks */
@@ -243,22 +241,14 @@ blockquote p {
   color: var(--ifm-quote-color);
 }
 
-/* Tip/Info Boxes */
-.alert--info {
-  background-color: var(--ifm-quote-background-color);
-  border-color: var(--ifm-color-primary);
-  color: var(--ifm-quote-color);
+/* Handle Symbol */
+.symbol {
+  color: var(--symbol-color);
+  fill: var(--symbol-color);
 }
 
-/* Custom Slate Grey Replacement */
-.some-element-class {
-  background-color: var(--custom-slate-grey);
-  /* Replace .some-element-class with the actual class of the element with the slate grey background */
-}
-
-/* Ensure other elements follow the same color schema */
-.docMainContainer,
-.docItemContainer {
-  background-color: var(--ifm-background-color);
-  color: var(--ifm-text-color);
+/* Ensure SVG symbols change color */
+.symbol svg {
+  fill: var(--symbol-color);
+  stroke: var(--symbol-color);
 }
