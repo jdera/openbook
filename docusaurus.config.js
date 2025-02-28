@@ -51,7 +51,7 @@ const config = {
         respectPrefersColorScheme: true, // Use the user's system preference if available
       },
       navbar: {
-        title: 'OpenBooks',
+        title: '',
         logo: {
           alt: 'OpenBooks Logo',
           src: 'img/logo.svg', // Light mode logo
