@@ -130,22 +130,13 @@ h1, h2, h3, h4, h5, h6 {
 .navbar__link:hover,
 .navbar__item .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color);
+  
 }
 
 /* Footer */
 .footer {
   background-color: var(--ifm-footer-background-color);
   color: var(--ifm-footer-text-color);
-}
-
-/* Footer headers should use Space Mono */
-.footer__title {
-  font-family: 'Space Mono', monospace;
-}
-
-/* Footer links should use Rubik */
-.footer__link-item {
-  font-family: 'Rubik', sans-serif;
 }
 
 .footer a {
@@ -175,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   color: grey;
   font-family: 'Rubik', sans-serif;
 }
+
 
 /* Links */
 a {
