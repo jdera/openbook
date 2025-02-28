@@ -1,11 +1,11 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
 /* ---------- Light Mode Styles ---------- */
 :root {
   /* Fonts */
   --ifm-font-family-base: 'Rubik', sans-serif;
-  --ifm-font-family-monospace: 'DM Mono', monospace;
+  --ifm-font-family-monospace: 'Space Mono', monospace;
 
   /* Primary Colors */
   --ifm-color-primary: #131313;          
@@ -52,7 +52,7 @@
   --custom-slate-grey: #FFFFFF;
 
   /* Symbol Color */
-  --symbol-color: inherit; /* Keep original symbol color in light mode */
+  --symbol-color: inherit;
 }
 
 /* ---------- Dark Mode Styles ---------- */
@@ -102,7 +102,7 @@
   --custom-slate-grey: #131313;
 
   /* Symbol Color */
-  --symbol-color: #FFFFFF; /* Make symbol white in dark mode */
+  --symbol-color: #FFFFFF;
 }
 
 /* ---------- General Styles ---------- */
@@ -110,6 +110,11 @@ body {
   background-color: var(--ifm-background-color);
   color: var(--ifm-text-color);
   font-family: var(--ifm-font-family-base);
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Mono', monospace;
 }
 
 /* Navbar */
@@ -147,7 +152,7 @@ body {
   color: var(--ifm-text-color);
 }
 
-/* Top Portion of Main Body Page */
+/* Hero Section */
 .hero {
   background-color: var(--ifm-background-color);
   color: var(--ifm-text-color);
@@ -178,48 +183,12 @@ a:hover {
   opacity: 0.8;
 }
 
-/* Donate Button */
-.navbar__donate-button {
-  background-color: var(--ifm-button-background-color);
-  color: var(--ifm-button-text-color);
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid var(--ifm-button-background-color);
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  margin-left: 10px;
-  display: none;
-}
-
-/* Show Donate Button on Mobile */
-@media (max-width: 767px) {
-  .navbar__donate-button {
-    display: block;
-  }
-}
-
 /* Code Blocks */
 pre,
 code {
   background-color: var(--ifm-code-background);
   color: var(--ifm-text-color);
   font-family: var(--ifm-font-family-monospace);
-}
-
-/* Sidebar */
-.theme-doc-sidebar-container {
-  background-color: var(--ifm-sidebar-background-color);
-}
-
-.theme-doc-sidebar-item > a {
-  color: var(--ifm-sidebar-link-color);
-}
-
-.theme-doc-sidebar-item > a:hover {
-  color: var(--ifm-sidebar-link-hover-color);
 }
 
 /* Blockquotes */
