@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula'); // You can
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'OPENBOOK',
-  tagline: 'A Testimony of Impossible Things',
+  tagline: 'Stories of Impossible Things',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
