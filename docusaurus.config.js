@@ -33,7 +33,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/openbooks-org/openbooks/tree/main/',
+          editUrl: 'https://github.com/jdera/openbooks/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'), // Ensure your custom CSS is loaded
