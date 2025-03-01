@@ -46,10 +46,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'light', // Set default color mode to light
-        disableSwitch: false, // Enable the switcher in the navbar
-        respectPrefersColorScheme: true, // Use the user's system preference if available
-      },
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false, // Force light mode as default
+        },
       navbar: {
         title: '',
         logo: {
