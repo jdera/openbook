@@ -153,6 +153,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-text-color);
 }
 
+/* Button Text */
+.button {
+  font-size: 14px; /* Adjust this value as needed */
+}
+
 /* Hero Section */
 .hero {
   background-color: var(--ifm-background-color);
