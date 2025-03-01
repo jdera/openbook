@@ -97,7 +97,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} OpenBooks. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} OpenBooks.`,
       },
       prism: {
         theme: lightCodeTheme, // Use your desired light code theme
